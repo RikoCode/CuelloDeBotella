@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 import sqlite3
 import json
 
-app = Flask(__name__, template_folder='docs')
+app = Flask(__name__, template_folder='docs', static_folder='docs/static')
 
 def get_component_data(component_type, model):
     conn = sqlite3.connect('componentes.db')
