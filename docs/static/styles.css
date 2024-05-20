@@ -1,0 +1,55 @@
+body {
+    background-color: #f8f9fa;
+    background-image: url('logo.jpg'); /* Verifica que esta ruta sea correcta */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #007bff !important;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.alert-info {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    color: #0056b3;
+}
