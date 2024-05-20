@@ -1,13 +1,16 @@
 from flask import Flask, request, render_template
 from flask_sqlalchemy import SQLAlchemy
-from werkzeug.utils import quote 
+from urllib.parse import quote as url_quote 
 import sqlite3
 import json
 import os
 
-app = Flask(__name__, template_folder='docs', static_folder='docs/static')
+app = Flask(__name__, template_folder='docs', static_folder='docs/static')7
 
 app.config['SQLALCHEMY_DATABASE_URI'] == 'sqlite:///path/to/componentes.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
 
 def get_component_data(component_type, model):
     conn = sqlite3.connect('componentes.db')
@@ -46,7 +49,8 @@ def calculate_bottleneck(cpu_model, gpu_model, ram_model):
     return f"Cuello de botella aproximado: {bottleneck_percentage:.2f}%"
 @app.route('/')
 def index():
-    some_quoted_url= quote(some_url)
+    some_url= "http://example.com/some path"
+    some_quoted_url= url_quote(some_url)
     conn = sqlite3.connect('componentes.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM componentes WHERE tipo = 'CPU'")
