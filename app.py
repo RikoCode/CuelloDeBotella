@@ -1,8 +1,7 @@
 from flask import Flask, request, render_template
+from flask_frozen import Freezer
 import sqlite3
 import json
-
-load_dotenv()
 
 app = Flask(__name__, template_folder='docs', static_folder='docs/static')
 
