@@ -1,7 +1,9 @@
 from flask import Flask, request, render_template
-from flask_frozen import Freezer
+from urllib.parse import quote as url_quote
 import sqlite3
 import json
+
+some_quoted_url() = url_quote(some_url)
 
 app = Flask(__name__, template_folder='docs', static_folder='docs/static')
 
