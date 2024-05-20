@@ -5,7 +5,7 @@ import sqlite3
 import json
 import os
 
-app = Flask(__name__, template_folder='docs', static_folder='docs/static')7
+app = Flask(__name__, template_folder='docs', static_folder='docs/static')
 
 app.config['SQLALCHEMY_DATABASE_URI'] == 'sqlite:///path/to/componentes.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
