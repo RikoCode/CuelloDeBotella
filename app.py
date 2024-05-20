@@ -46,7 +46,7 @@ def calculate_bottleneck(cpu_model, gpu_model, ram_model):
     return f"Cuello de botella aproximado: {bottleneck_percentage:.2f}%"
 @app.route('/')
 def index():
-    some_quoted_url = url_quote(some_url)
+    some_quoted_url= url_quote(some_url)
     conn = sqlite3.connect('componentes.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM componentes WHERE tipo = 'CPU'")
