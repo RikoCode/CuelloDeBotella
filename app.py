@@ -7,7 +7,7 @@ import os
 
 app = Flask(__name__, template_folder='docs', static_folder='docs/static')
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///path/to/componentes.db'
+app.config['SQLALCHEMY_DATABASE_URI'] == 'sqlite:///path/to/componentes.db'
 
 def get_component_data(component_type, model):
     conn = sqlite3.connect('componentes.db')
@@ -46,7 +46,7 @@ def calculate_bottleneck(cpu_model, gpu_model, ram_model):
     return f"Cuello de botella aproximado: {bottleneck_percentage:.2f}%"
 @app.route('/')
 def index():
-    some_quoted_url() = url_quote(some_url)
+    some_quoted_url = url_quote(some_url)
     conn = sqlite3.connect('componentes.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM componentes WHERE tipo = 'CPU'")
